@@ -21,7 +21,7 @@ npm start
 
 ```
 
-Your app should now be running on [localhost:8080](http://localhost:8080/).
+Your app should now be running on [localhost:19002](http://localhost:19002/).
 
 ## Environment file (.env)
 
