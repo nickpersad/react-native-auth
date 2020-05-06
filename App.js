@@ -194,7 +194,7 @@ export default function App({ navigation }) {
           body: JSON.stringify(data)
         };
         try {
-          const fetchResponse = await fetch(`${SERVER}:${SERVER_PORT}/api/login`, settings);
+          const fetchResponse = await fetch(`${SERVER}:${SERVER_PORT}/api/signin`, settings);
           const data = await fetchResponse.json();
 
           state.userToken = data.id;
