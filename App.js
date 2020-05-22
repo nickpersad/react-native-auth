@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { AsyncStorage, StatusBar, Button, Text, TextInput, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { AsyncStorage, Button, Text, TextInput, View, TouchableOpacity, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 
 import { SERVER, SERVER_PORT } from 'react-native-dotenv';
@@ -217,7 +216,6 @@ export default function App({ navigation }) {
         };
         try {
           const fetchResponse = await fetch(`${SERVER}:${SERVER_PORT}/api/signout`, settings);
-          const data = await fetchResponse;
 
           state.userToken = null;
           dispatch({ type: 'SIGN_OUT' })
